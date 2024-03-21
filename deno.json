@@ -1,0 +1,17 @@
+{
+	"name": "@doctor/requester",
+	"version": "1.0.0",
+	"exports": "./mod.ts",
+	"publish": {
+		"exclude": [
+			".*"
+		]
+	},
+	"tasks": {
+		"fmt": "prettier --write ./**/*.ts",
+		"check": "deno check mod.ts && deno cache --lock-write mod.ts"
+	},
+	"imports": {
+		"zod": "npm:zod@3"
+	}
+}
